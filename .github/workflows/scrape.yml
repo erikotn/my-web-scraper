@@ -1,46 +1,47 @@
 name: Scraper Bot
 
-# This section defines "When to run"
 on:
-  workflow_dispatch:      # Allows you to click a "Run" button manually on GitHub
+  workflow_dispatch:
     inputs:
       url:
-        description: 'Website URL to scrape'
+        description: 'URL to scrape'
         required: true
         default: 'https://example.com'
-  repository_dispatch:    # Allows Vercel to trigger this via code
-    types: [start-scrape]
 
 jobs:
   scrape-job:
     runs-on: ubuntu-latest
     permissions:
-      contents: write     # This permission allows the bot to save the file back to your repo
+      contents: write
 
     steps:
-      - name: Download your code
+      - name: 1. Checkout Code
         uses: actions/checkout@v3
 
-      - name: Install Python
+      - name: 2. Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
-      - name: Install Libraries
+      - name: 3. Install Libraries
         run: |
-          pip install -r requirements.txt
+          pip install crawl4ai playwright nest_asyncio
           playwright install chromium
 
-      - name: Run the Robot
-        env: 
-          # We grab the URL from the trigger input
-          TARGET_URL: ${{ github.event.client_payload.url || inputs.url }}
+      - name: 4. Run Scraper
+        env:
+          TARGET_URL: ${{ inputs.url }}
         run: python scraper.py
 
-      - name: Save Result to Repo
+      - name: 5. Debug - Show File
+        run: |
+          ls -l
+          cat scraped_data.md || echo "File does not exist!"
+
+      - name: 6. Save Result
         run: |
           git config --global user.name 'Scraper Bot'
           git config --global user.email 'bot@noreply.github.com'
           git add scraped_data.md
-          git commit -m "New scrape finished" || echo "No changes"
+          git commit -m "New scrape result" || echo "No changes to commit"
           git push
