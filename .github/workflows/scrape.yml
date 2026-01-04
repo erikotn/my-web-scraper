@@ -1,0 +1,46 @@
+name: Scraper Bot
+
+# This section defines "When to run"
+on:
+  workflow_dispatch:      # Allows you to click a "Run" button manually on GitHub
+    inputs:
+      url:
+        description: 'Website URL to scrape'
+        required: true
+        default: 'https://example.com'
+  repository_dispatch:    # Allows Vercel to trigger this via code
+    types: [start-scrape]
+
+jobs:
+  scrape-job:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # This permission allows the bot to save the file back to your repo
+
+    steps:
+      - name: Download your code
+        uses: actions/checkout@v3
+
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Libraries
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+
+      - name: Run the Robot
+        env: 
+          # We grab the URL from the trigger input
+          TARGET_URL: ${{ github.event.client_payload.url || inputs.url }}
+        run: python scraper.py
+
+      - name: Save Result to Repo
+        run: |
+          git config --global user.name 'Scraper Bot'
+          git config --global user.email 'bot@noreply.github.com'
+          git add scraped_data.md
+          git commit -m "New scrape finished" || echo "No changes"
+          git push
