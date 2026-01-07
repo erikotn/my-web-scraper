@@ -234,66 +234,17 @@ E. info@instituutvoorinclusiefonderwijs.nl
 [Over ons](https://inclu-zo.nl/#over-ons) [Masterclass aanbod](https://inclu-zo.nl/#aanbod) [Inclu-zo! Spel](https://inclu-zo.nl/#aanbod) [Ervaringen](https://inclu-zo.nl/#ervaringen) [Nieuws](https://inclu-zo.nl/#nieuws) [Contact](https://inclu-zo.nl/#contact)
 
 
---- Page 3: https://inclu-zo.nl/wp-content/uploads/2024/02/Algemene-voorwaarden-Inclu-zo.pdf ---
+--- Page 3: https://inclu-zo.nl/wp-content/uploads/2024/02/Privacyverklaring-Instituut-voor-Inclusief-Onderwijs-def.pdf ---
 
 
 
 
---- Page 4: https://inclu-zo.nl/wp-content/uploads/2024/02/Privacyverklaring-Instituut-voor-Inclusief-Onderwijs-def.pdf ---
+--- Page 4: https://inclu-zo.nl/wp-content/uploads/2024/02/Algemene-voorwaarden-Inclu-zo.pdf ---
 
 
 
 
---- Page 5: https://inclu-zo.nl/news/kappen-met-ketens ---
-
-[![INCLU-ZO](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO.svg)](https://inclu-zo.nl/)
-  * [Over ons](https://inclu-zo.nl/#over-ons)
-  * [Masterclass aanbod](https://inclu-zo.nl/product/masterclass/)
-  * [Inclu-zo Spel](https://inclu-zo.nl/inclu-zo-spel/)
-  * [Ervaringen](https://inclu-zo.nl/#ervaringen)
-  * [Nieuws](https://inclu-zo.nl/#nieuws)
-  * [Contact](https://inclu-zo.nl/contact-2)
-
-
-[ Aanmelden ](https://inclu-zo.nl/product/masterclass/#masterclass)
-[![INCLU-ZO](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO.svg)](https://inclu-zo.nl/)
-  * [Over ons](https://inclu-zo.nl/#over-ons)
-  * [Masterclass aanbod](https://inclu-zo.nl/product/masterclass/)
-  * [Inclu-zo Spel](https://inclu-zo.nl/inclu-zo-spel/)
-  * [Ervaringen](https://inclu-zo.nl/#ervaringen)
-  * [Nieuws](https://inclu-zo.nl/#nieuws)
-  * [Contact](https://inclu-zo.nl/contact-2)
-
-
-[ Aanmelden ](https://inclu-zo.nl/product/masterclass/#masterclass)
-##### [Blogs](https://inclu-zo.nl)
-april 5, 2024
-# Leren waarderen van verschillen: ‘𝐊𝐚𝐩𝐩𝐞𝐧 𝐦𝐞𝐭 𝐤𝐞𝐭𝐞𝐧𝐬’
-Benieuwd naar de dynamiek achter de ketens van zorg en ondersteuning in het onderwijs?
-Ons aankomende e-book “Kappen met Ketens” werpt een kritische blik op dit fenomeen en de impact van ketens op inclusief onderwijs. We werken uit waarom het denken en werken in ketens niet altijd de beste oplossing is voor diverse vraagstukken in het onderwijs. Ontdek in ons e-book hoe standaardisering in ketens kan leiden tot de-contextualisering, waarbij het unieke van elke leerling verloren gaat. We verkennen ook de dynamieken die ketens kunnen creëren en waarom dit een risico vormt voor inclusie en een stevige pedagogische basis.
-𝗘-𝗯𝗼𝗼𝗸 𝗼𝗻𝘁𝘃𝗮𝗻𝗴𝗲𝗻?  
-Wil jij het e-book ontvangen zodra deze klaar is meld je dan aan voor onze nieuwsbrief via de contactpagina.
-𝗔𝗮𝗻 𝗱𝗲 𝘀𝗹𝗮𝗴?  
-Schrijf je dan in voor onze masterclass Inclu-zo: “Van Individueel naar Inclusief Onderwijs.”
-In deze masterclass gaan we onder andere ook dieper in op “Kappen met Ketens” en bieden we strategieën voor concrete stappen naar inclusiever onderwijs in jouw school.
-Lees hier verder **[Kappen met ketens](https://instituutvoorinclusiefonderwijs.nl/kappen-met-ketens/)**
-Share this article: [](https://www.facebook.com/sharer/sharer.php?u=https://inclu-zo.nl/news/kappen-met-ketens/) [](whatsapp://send?text=https://inclu-zo.nl/news/kappen-met-ketens/)
-* * *
-### Latest posts
-[ ](https://inclu-zo.nl/news/kappen-met-ketens/) [ april 5, 2024  Leren waarderen van verschillen: ‘𝐊𝐚𝐩𝐩𝐞𝐧 𝐦𝐞𝐭 𝐤𝐞𝐭𝐞𝐧𝐬’  ](https://inclu-zo.nl/news/kappen-met-ketens/)
-[![](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO_wit.svg)](https://inclu-zo.nl/)
-  * [LinkedIn](https://www.linkedin.com/company/102655298/admin/feed/posts/?feedType=following)
-
-
-[Algemene voorwaarden](https://inclu-zo.nl/wp-content/uploads/2024/02/Algemene-voorwaarden-Inclu-zo.pdf) – [Privacy beleid](https://inclu-zo.nl/wp-content/uploads/2024/02/Privacyverklaring-Instituut-voor-Inclusief-Onderwijs-def.pdf)
-© 2025 Instituut voor Inclusief Onderwijs. All Rights Reserved.
-### Contact
-E. info@instituutvoorinclusiefonderwijs.nl
-### Navigeren
-[Over ons](https://inclu-zo.nl/#over-ons) [Masterclass aanbod](https://inclu-zo.nl/#aanbod) [Inclu-zo! Spel](https://inclu-zo.nl/#aanbod) [Ervaringen](https://inclu-zo.nl/#ervaringen) [Nieuws](https://inclu-zo.nl/#nieuws) [Contact](https://inclu-zo.nl/#contact)
-
-
---- Page 6: https://inclu-zo.nl/inclu-zo-spel ---
+--- Page 5: https://inclu-zo.nl/inclu-zo-spel ---
 
 [![INCLU-ZO](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO.svg)](https://inclu-zo.nl/)
   * [Over ons](https://inclu-zo.nl/#over-ons)
@@ -510,7 +461,96 @@ E. info@instituutvoorinclusiefonderwijs.nl
 [Over ons](https://inclu-zo.nl/#over-ons) [Masterclass aanbod](https://inclu-zo.nl/#aanbod) [Inclu-zo! Spel](https://inclu-zo.nl/#aanbod) [Ervaringen](https://inclu-zo.nl/#ervaringen) [Nieuws](https://inclu-zo.nl/#nieuws) [Contact](https://inclu-zo.nl/#contact)
 
 
---- Page 7: https://inclu-zo.nl/product/masterclass ---
+--- Page 6: https://inclu-zo.nl/news/kappen-met-ketens ---
+
+[![INCLU-ZO](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO.svg)](https://inclu-zo.nl/)
+  * [Over ons](https://inclu-zo.nl/#over-ons)
+  * [Masterclass aanbod](https://inclu-zo.nl/product/masterclass/)
+  * [Inclu-zo Spel](https://inclu-zo.nl/inclu-zo-spel/)
+  * [Ervaringen](https://inclu-zo.nl/#ervaringen)
+  * [Nieuws](https://inclu-zo.nl/#nieuws)
+  * [Contact](https://inclu-zo.nl/contact-2)
+
+
+[ Aanmelden ](https://inclu-zo.nl/product/masterclass/#masterclass)
+[![INCLU-ZO](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO.svg)](https://inclu-zo.nl/)
+  * [Over ons](https://inclu-zo.nl/#over-ons)
+  * [Masterclass aanbod](https://inclu-zo.nl/product/masterclass/)
+  * [Inclu-zo Spel](https://inclu-zo.nl/inclu-zo-spel/)
+  * [Ervaringen](https://inclu-zo.nl/#ervaringen)
+  * [Nieuws](https://inclu-zo.nl/#nieuws)
+  * [Contact](https://inclu-zo.nl/contact-2)
+
+
+[ Aanmelden ](https://inclu-zo.nl/product/masterclass/#masterclass)
+##### [Blogs](https://inclu-zo.nl)
+april 5, 2024
+# Leren waarderen van verschillen: ‘𝐊𝐚𝐩𝐩𝐞𝐧 𝐦𝐞𝐭 𝐤𝐞𝐭𝐞𝐧𝐬’
+Benieuwd naar de dynamiek achter de ketens van zorg en ondersteuning in het onderwijs?
+Ons aankomende e-book “Kappen met Ketens” werpt een kritische blik op dit fenomeen en de impact van ketens op inclusief onderwijs. We werken uit waarom het denken en werken in ketens niet altijd de beste oplossing is voor diverse vraagstukken in het onderwijs. Ontdek in ons e-book hoe standaardisering in ketens kan leiden tot de-contextualisering, waarbij het unieke van elke leerling verloren gaat. We verkennen ook de dynamieken die ketens kunnen creëren en waarom dit een risico vormt voor inclusie en een stevige pedagogische basis.
+𝗘-𝗯𝗼𝗼𝗸 𝗼𝗻𝘁𝘃𝗮𝗻𝗴𝗲𝗻?  
+Wil jij het e-book ontvangen zodra deze klaar is meld je dan aan voor onze nieuwsbrief via de contactpagina.
+𝗔𝗮𝗻 𝗱𝗲 𝘀𝗹𝗮𝗴?  
+Schrijf je dan in voor onze masterclass Inclu-zo: “Van Individueel naar Inclusief Onderwijs.”
+In deze masterclass gaan we onder andere ook dieper in op “Kappen met Ketens” en bieden we strategieën voor concrete stappen naar inclusiever onderwijs in jouw school.
+Lees hier verder **[Kappen met ketens](https://instituutvoorinclusiefonderwijs.nl/kappen-met-ketens/)**
+Share this article: [](https://www.facebook.com/sharer/sharer.php?u=https://inclu-zo.nl/news/kappen-met-ketens/) [](whatsapp://send?text=https://inclu-zo.nl/news/kappen-met-ketens/)
+* * *
+### Latest posts
+[ ](https://inclu-zo.nl/news/kappen-met-ketens/) [ april 5, 2024  Leren waarderen van verschillen: ‘𝐊𝐚𝐩𝐩𝐞𝐧 𝐦𝐞𝐭 𝐤𝐞𝐭𝐞𝐧𝐬’  ](https://inclu-zo.nl/news/kappen-met-ketens/)
+[![](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO_wit.svg)](https://inclu-zo.nl/)
+  * [LinkedIn](https://www.linkedin.com/company/102655298/admin/feed/posts/?feedType=following)
+
+
+[Algemene voorwaarden](https://inclu-zo.nl/wp-content/uploads/2024/02/Algemene-voorwaarden-Inclu-zo.pdf) – [Privacy beleid](https://inclu-zo.nl/wp-content/uploads/2024/02/Privacyverklaring-Instituut-voor-Inclusief-Onderwijs-def.pdf)
+© 2025 Instituut voor Inclusief Onderwijs. All Rights Reserved.
+### Contact
+E. info@instituutvoorinclusiefonderwijs.nl
+### Navigeren
+[Over ons](https://inclu-zo.nl/#over-ons) [Masterclass aanbod](https://inclu-zo.nl/#aanbod) [Inclu-zo! Spel](https://inclu-zo.nl/#aanbod) [Ervaringen](https://inclu-zo.nl/#ervaringen) [Nieuws](https://inclu-zo.nl/#nieuws) [Contact](https://inclu-zo.nl/#contact)
+
+
+--- Page 7: https://inclu-zo.nl/contact-2 ---
+
+[![INCLU-ZO](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO.svg)](https://inclu-zo.nl/)
+  * [Over ons](https://inclu-zo.nl/#over-ons)
+  * [Masterclass aanbod](https://inclu-zo.nl/product/masterclass/)
+  * [Inclu-zo Spel](https://inclu-zo.nl/inclu-zo-spel/)
+  * [Ervaringen](https://inclu-zo.nl/#ervaringen)
+  * [Nieuws](https://inclu-zo.nl/#nieuws)
+  * [Contact](https://inclu-zo.nl/contact-2)
+
+
+[ Aanmelden ](https://inclu-zo.nl/product/masterclass/#masterclass)
+[![INCLU-ZO](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO.svg)](https://inclu-zo.nl/)
+  * [Over ons](https://inclu-zo.nl/#over-ons)
+  * [Masterclass aanbod](https://inclu-zo.nl/product/masterclass/)
+  * [Inclu-zo Spel](https://inclu-zo.nl/inclu-zo-spel/)
+  * [Ervaringen](https://inclu-zo.nl/#ervaringen)
+  * [Nieuws](https://inclu-zo.nl/#nieuws)
+  * [Contact](https://inclu-zo.nl/contact-2)
+
+
+[ Aanmelden ](https://inclu-zo.nl/product/masterclass/#masterclass)
+# Heb je vragen of wil je meer informatie over de masterclass inclu-zo!
+Neem gerust contact met ons op.
+## Contactformulier
+Email:
+[info@instituutvoorinclusiefonderwijs.nl](https://inclu-zo.nl/contact-2/info@instituutvoorinclusiefonderwijs.nl)
+[ ![](https://inclu-zo.nl/wp-content/uploads/2024/02/Willeke-Foto.webp) Willeke Doornbos  LinkedIn ](https://nl.linkedin.com/in/willeke-doornbos-61647b55) [ ![](https://inclu-zo.nl/wp-content/uploads/2025/09/Foto-Wienen-02-groot-scaled-1.jpg) Bert Wienen  LinkedIn ](https://nl.linkedin.com/in/willeke-doornbos-61647b55)
+[![](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO_wit.svg)](https://inclu-zo.nl/)
+  * [LinkedIn](https://www.linkedin.com/company/102655298/admin/feed/posts/?feedType=following)
+
+
+[Algemene voorwaarden](https://inclu-zo.nl/wp-content/uploads/2024/02/Algemene-voorwaarden-Inclu-zo.pdf) – [Privacy beleid](https://inclu-zo.nl/wp-content/uploads/2024/02/Privacyverklaring-Instituut-voor-Inclusief-Onderwijs-def.pdf)
+© 2025 Instituut voor Inclusief Onderwijs. All Rights Reserved.
+### Contact
+E. info@instituutvoorinclusiefonderwijs.nl
+### Navigeren
+[Over ons](https://inclu-zo.nl/#over-ons) [Masterclass aanbod](https://inclu-zo.nl/#aanbod) [Inclu-zo! Spel](https://inclu-zo.nl/#aanbod) [Ervaringen](https://inclu-zo.nl/#ervaringen) [Nieuws](https://inclu-zo.nl/#nieuws) [Contact](https://inclu-zo.nl/#contact)
+
+
+--- Page 8: https://inclu-zo.nl/product/masterclass ---
 
 [![INCLU-ZO](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO.svg)](https://inclu-zo.nl/)
   * [Over ons](https://inclu-zo.nl/#over-ons)
@@ -672,46 +712,6 @@ Nee, de masterclass wordt fysiek aangeboden.
 A: Er zijn geen opleidingseisen of niveau voor deelname. Wel moet je toegang hebben/krijgen tot gegevens in je organisatie. Denk hierbij aan aanvragen voor het gespecialiseerd onderwijs, OPP (ontwikkelingsperspectiefplannen) en algemene data over verwijzing en deelname.
 ##  Wat zijn de kosten van deze masterclass? 
 **Via het contactformulier is een offerte op maat aan te vragen.**
-[![](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO_wit.svg)](https://inclu-zo.nl/)
-  * [LinkedIn](https://www.linkedin.com/company/102655298/admin/feed/posts/?feedType=following)
-
-
-[Algemene voorwaarden](https://inclu-zo.nl/wp-content/uploads/2024/02/Algemene-voorwaarden-Inclu-zo.pdf) – [Privacy beleid](https://inclu-zo.nl/wp-content/uploads/2024/02/Privacyverklaring-Instituut-voor-Inclusief-Onderwijs-def.pdf)
-© 2025 Instituut voor Inclusief Onderwijs. All Rights Reserved.
-### Contact
-E. info@instituutvoorinclusiefonderwijs.nl
-### Navigeren
-[Over ons](https://inclu-zo.nl/#over-ons) [Masterclass aanbod](https://inclu-zo.nl/#aanbod) [Inclu-zo! Spel](https://inclu-zo.nl/#aanbod) [Ervaringen](https://inclu-zo.nl/#ervaringen) [Nieuws](https://inclu-zo.nl/#nieuws) [Contact](https://inclu-zo.nl/#contact)
-
-
---- Page 8: https://inclu-zo.nl/contact-2 ---
-
-[![INCLU-ZO](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO.svg)](https://inclu-zo.nl/)
-  * [Over ons](https://inclu-zo.nl/#over-ons)
-  * [Masterclass aanbod](https://inclu-zo.nl/product/masterclass/)
-  * [Inclu-zo Spel](https://inclu-zo.nl/inclu-zo-spel/)
-  * [Ervaringen](https://inclu-zo.nl/#ervaringen)
-  * [Nieuws](https://inclu-zo.nl/#nieuws)
-  * [Contact](https://inclu-zo.nl/contact-2)
-
-
-[ Aanmelden ](https://inclu-zo.nl/product/masterclass/#masterclass)
-[![INCLU-ZO](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO.svg)](https://inclu-zo.nl/)
-  * [Over ons](https://inclu-zo.nl/#over-ons)
-  * [Masterclass aanbod](https://inclu-zo.nl/product/masterclass/)
-  * [Inclu-zo Spel](https://inclu-zo.nl/inclu-zo-spel/)
-  * [Ervaringen](https://inclu-zo.nl/#ervaringen)
-  * [Nieuws](https://inclu-zo.nl/#nieuws)
-  * [Contact](https://inclu-zo.nl/contact-2)
-
-
-[ Aanmelden ](https://inclu-zo.nl/product/masterclass/#masterclass)
-# Heb je vragen of wil je meer informatie over de masterclass inclu-zo!
-Neem gerust contact met ons op.
-## Contactformulier
-Email:
-[info@instituutvoorinclusiefonderwijs.nl](https://inclu-zo.nl/contact-2/info@instituutvoorinclusiefonderwijs.nl)
-[ ![](https://inclu-zo.nl/wp-content/uploads/2024/02/Willeke-Foto.webp) Willeke Doornbos  LinkedIn ](https://nl.linkedin.com/in/willeke-doornbos-61647b55) [ ![](https://inclu-zo.nl/wp-content/uploads/2025/09/Foto-Wienen-02-groot-scaled-1.jpg) Bert Wienen  LinkedIn ](https://nl.linkedin.com/in/willeke-doornbos-61647b55)
 [![](https://inclu-zo.nl/wp-content/uploads/2024/02/INCLUZO_LOGO_wit.svg)](https://inclu-zo.nl/)
   * [LinkedIn](https://www.linkedin.com/company/102655298/admin/feed/posts/?feedType=following)
 
