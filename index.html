@@ -92,9 +92,9 @@
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
           <span class="font-semibold">Klaar!</span>
         </div>
-        <a id="download-link" href="#" download="scraped_data.md" class="accent text-white font-semibold px-6 py-3 rounded-md inline-block w-full text-center transition">
+        <button id="download-btn" class="accent text-white font-semibold px-6 py-3 rounded-md w-full transition">
           Download scraped_data.md
-        </a>
+        </button>
         <p class="text-xs text-slate-500 mt-3 mono" id="run-info"></p>
       </div>
 
@@ -280,10 +280,36 @@
     function showSuccess(run, scrapedUrl) {
       $('status-area').classList.add('hidden');
       $('result-area').classList.remove('hidden');
-      // Cache-buster zodat browser geen oude versie pakt
-      $('download-link').href = `${RAW_URL}?t=${Date.now()}`;
       $('run-info').textContent = `Run #${run.run_number} — ${scrapedUrl}`;
       resetButton();
+    }
+
+    async function downloadResult() {
+      const btn = $('download-btn');
+      const originalLabel = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Bezig met downloaden...';
+      try {
+        // Cache-buster + fetch → blob: werkt cross-origin (raw.githubusercontent.com heeft CORS open)
+        // en omzeilt het cross-origin "download attribute"-probleem dat de directe link blokkeerde.
+        const res = await fetch(`${RAW_URL}?t=${Date.now()}`, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const blob = await res.blob();
+        const blobUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = 'scraped_data.md';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        // Klein moment wachten zodat de download daadwerkelijk start vóór we de URL vrijgeven
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+      } catch (err) {
+        showError(`Download mislukt: ${err.message}`);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = originalLabel;
+      }
     }
 
     function showError(msg) {
@@ -307,6 +333,7 @@
     }
 
     $('scrape-btn').addEventListener('click', runScrape);
+    $('download-btn').addEventListener('click', downloadResult);
     $('url-input').addEventListener('keydown', e => {
       if (e.key === 'Enter' && !$('scrape-btn').disabled) runScrape();
     });
