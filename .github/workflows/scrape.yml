@@ -39,9 +39,11 @@ jobs:
           cat scraped_data.md || echo "File does not exist!"
 
       - name: 6. Save Result
+        env:
+          TARGET_URL: ${{ inputs.url }}
         run: |
           git config --global user.name 'Scraper Bot'
           git config --global user.email 'bot@noreply.github.com'
           git add scraped_data.md
-          git commit -m "New scrape result" || echo "No changes to commit"
+          git commit --allow-empty -m "Scrape: $TARGET_URL"
           git push
