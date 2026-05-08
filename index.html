@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web scraper</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0F172A;
+      --panel: #1E293B;
+      --border: #334155;
+      --text: #F1F5F9;
+      --muted: #94A3B8;
+      --accent: #14B8A6;
+      --accent-hover: #0D9488;
+      --danger: #EF4444;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+    }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .panel { background: var(--panel); border: 1px solid var(--border); }
+    .accent { background: var(--accent); }
+    .accent:hover { background: var(--accent-hover); }
+    .accent:disabled { background: #475569; cursor: not-allowed; }
+    input[type=text], input[type=url], input[type=password] {
+      background: #0F172A;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    input:focus { outline: none; border-color: var(--accent); }
+    .pulse-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 1.4s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <main class="max-w-2xl mx-auto px-6 py-12">
+
+    <!-- Header -->
+    <header class="mb-10">
+      <h1 class="text-4xl font-bold tracking-tight">Web scraper</h1>
+      <p class="text-slate-400 mt-2">Voer een URL in, krijg een markdown-bestand terug.</p>
+    </header>
+
+    <!-- Settings: alleen tonen als geen PAT -->
+    <section id="settings-panel" class="panel rounded-lg p-5 mb-6 hidden">
+      <h2 class="text-sm font-semibold text-slate-300 mb-3 uppercase tracking-wider">Eenmalige setup</h2>
+      <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+        Plak hier je GitHub Personal Access Token. Die heb je nodig om de scraper te starten.
+        <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" class="text-teal-400 hover:underline">Maak een token aan</a> →
+        Repository access: alleen <span class="mono">my-web-scraper</span> →
+        Permissions: Actions <span class="mono">Read and write</span> + Contents <span class="mono">Read</span>.
+        Token blijft op je eigen browser (localStorage), wordt nergens anders bewaard.
+      </p>
+      <input id="pat-input" type="password" placeholder="github_pat_..." class="w-full px-4 py-3 rounded-md mono text-sm">
+      <button id="save-pat" class="accent text-white font-medium px-5 py-2.5 rounded-md mt-3 transition">Opslaan</button>
+    </section>
+
+    <!-- Hoofd-form -->
+    <section class="panel rounded-lg p-6">
+      <label for="url-input" class="block text-sm font-medium text-slate-300 mb-2">URL om te scrapen</label>
+      <input id="url-input" type="url" placeholder="https://voorbeeld.nl" class="w-full px-4 py-3 rounded-md mono text-sm mb-4">
+
+      <button id="scrape-btn" class="accent text-white font-semibold px-6 py-3 rounded-md w-full transition">
+        Scrape
+      </button>
+
+      <!-- Status -->
+      <div id="status-area" class="mt-6 hidden">
+        <div class="flex items-center gap-3 text-slate-300">
+          <div id="status-dot" class="pulse-dot"></div>
+          <span id="status-text" class="text-sm">Workflow gestart...</span>
+        </div>
+        <p id="status-detail" class="text-xs text-slate-500 mt-2 mono"></p>
+      </div>
+
+      <!-- Resultaat -->
+      <div id="result-area" class="mt-6 hidden">
+        <div class="flex items-center gap-2 text-teal-400 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span class="font-semibold">Klaar!</span>
+        </div>
+        <a id="download-link" href="#" download="scraped_data.md" class="accent text-white font-semibold px-6 py-3 rounded-md inline-block w-full text-center transition">
+          Download scraped_data.md
+        </a>
+        <p class="text-xs text-slate-500 mt-3 mono" id="run-info"></p>
+      </div>
+
+      <!-- Error -->
+      <div id="error-area" class="mt-6 hidden p-4 rounded-md border border-red-500/30 bg-red-500/10">
+        <p class="text-sm text-red-400" id="error-text"></p>
+      </div>
+    </section>
+
+    <!-- Token-beheer footer -->
+    <footer class="mt-8 flex justify-between items-center text-xs text-slate-500">
+      <a href="https://github.com/erikotn/my-web-scraper" target="_blank" class="hover:text-slate-300">erikotn/my-web-scraper ↗</a>
+      <button id="forget-token" class="hover:text-slate-300 hidden">Vergeet token</button>
+    </footer>
+
+  </main>
+
+  <script>
+    const REPO_OWNER = 'erikotn';
+    const REPO_NAME = 'my-web-scraper';
+    const WORKFLOW_FILE = 'scrape.yml';
+    const BRANCH = 'main';
+    const RAW_URL = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}/scraped_data.md`;
+    const STORAGE_KEY = 'gh_pat_my_web_scraper';
+
+    const $ = id => document.getElementById(id);
+
+    // ─── PAT-beheer ───────────────────────────────────────────
+    function getPAT() {
+      return localStorage.getItem(STORAGE_KEY);
+    }
+    function setPAT(token) {
+      localStorage.setItem(STORAGE_KEY, token);
+      refreshUI();
+    }
+    function clearPAT() {
+      localStorage.removeItem(STORAGE_KEY);
+      refreshUI();
+    }
+    function refreshUI() {
+      const hasPAT = !!getPAT();
+      $('settings-panel').classList.toggle('hidden', hasPAT);
+      $('forget-token').classList.toggle('hidden', !hasPAT);
+      $('scrape-btn').disabled = !hasPAT;
+      if (!hasPAT) $('scrape-btn').textContent = 'Plak eerst je token hierboven';
+      else $('scrape-btn').textContent = 'Scrape';
+    }
+
+    $('save-pat').addEventListener('click', () => {
+      const token = $('pat-input').value.trim();
+      if (!token) return;
+      setPAT(token);
+      $('pat-input').value = '';
+    });
+
+    $('forget-token').addEventListener('click', () => {
+      if (confirm('Token uit deze browser verwijderen?')) clearPAT();
+    });
+
+    // ─── GitHub API helpers ───────────────────────────────────
+    async function ghFetch(path, options = {}) {
+      const pat = getPAT();
+      const res = await fetch(`https://api.github.com${path}`, {
+        ...options,
+        headers: {
+          'Accept': 'application/vnd.github+json',
+          'Authorization': `Bearer ${pat}`,
+          'X-GitHub-Api-Version': '2022-11-28',
+          ...(options.headers || {})
+        }
+      });
+      return res;
+    }
+
+    async function triggerWorkflow(url) {
+      const res = await ghFetch(
+        `/repos/${REPO_OWNER}/${REPO_NAME}/actions/workflows/${WORKFLOW_FILE}/dispatches`,
+        {
+          method: 'POST',
+          body: JSON.stringify({ ref: BRANCH, inputs: { url } })
+        }
+      );
+      if (!res.ok) {
+        const body = await res.text();
+        throw new Error(`Workflow starten mislukt (${res.status}): ${body}`);
+      }
+    }
+
+    async function getLatestRun() {
+      const res = await ghFetch(
+        `/repos/${REPO_OWNER}/${REPO_NAME}/actions/workflows/${WORKFLOW_FILE}/runs?per_page=1`
+      );
+      if (!res.ok) throw new Error(`Status ophalen mislukt (${res.status})`);
+      const data = await res.json();
+      return data.workflow_runs[0] || null;
+    }
+
+    // ─── Hoofd-flow ──────────────────────────────────────────
+    let polling = false;
+
+    async function runScrape() {
+      const url = $('url-input').value.trim();
+      if (!url) {
+        showError('Vul eerst een URL in.');
+        return;
+      }
+      try {
+        new URL(url);
+      } catch {
+        showError('Dat is geen geldige URL. Probeer https://voorbeeld.nl');
+        return;
+      }
+
+      hideError();
+      $('result-area').classList.add('hidden');
+      $('scrape-btn').disabled = true;
+      $('scrape-btn').textContent = 'Bezig...';
+      $('status-area').classList.remove('hidden');
+      setStatus('Workflow starten...', '');
+
+      // Onthoud welke run er was vóór onze trigger
+      const before = await getLatestRun();
+      const beforeId = before?.id || 0;
+
+      try {
+        await triggerWorkflow(url);
+      } catch (err) {
+        showError(err.message);
+        resetButton();
+        return;
+      }
+
+      setStatus('Workflow gestart, wachten tot run zichtbaar is...', '');
+      pollUntilDone(beforeId, url);
+    }
+
+    async function pollUntilDone(beforeId, scrapedUrl) {
+      polling = true;
+      const startedAt = Date.now();
+      const TIMEOUT_MS = 10 * 60 * 1000; // 10 min
+
+      while (polling) {
+        await sleep(5000);
+        if (Date.now() - startedAt > TIMEOUT_MS) {
+          showError('Timeout: meer dan 10 minuten geen resultaat. Check de Actions-tab op GitHub.');
+          resetButton();
+          return;
+        }
+
+        let run;
+        try {
+          run = await getLatestRun();
+        } catch (err) {
+          continue; // tijdelijke API-error, volgende poll
+        }
+        if (!run || run.id <= beforeId) {
+          setStatus('Wachten op run...', `(API zag nog geen nieuwe run)`);
+          continue;
+        }
+
+        const elapsed = Math.floor((Date.now() - startedAt) / 1000);
+        if (run.status === 'queued') {
+          setStatus('In wachtrij...', `~${elapsed}s — runner wordt opgestart`);
+        } else if (run.status === 'in_progress') {
+          setStatus('Bezig met scrapen...', `~${elapsed}s — typisch 1-3 min`);
+        } else if (run.status === 'completed') {
+          if (run.conclusion === 'success') {
+            showSuccess(run, scrapedUrl);
+          } else {
+            showError(`Workflow mislukt: ${run.conclusion}. Bekijk de logs op GitHub.`);
+            resetButton();
+          }
+          return;
+        }
+      }
+    }
+
+    function setStatus(text, detail) {
+      $('status-text').textContent = text;
+      $('status-detail').textContent = detail || '';
+    }
+
+    function showSuccess(run, scrapedUrl) {
+      $('status-area').classList.add('hidden');
+      $('result-area').classList.remove('hidden');
+      // Cache-buster zodat browser geen oude versie pakt
+      $('download-link').href = `${RAW_URL}?t=${Date.now()}`;
+      $('run-info').textContent = `Run #${run.run_number} — ${scrapedUrl}`;
+      resetButton();
+    }
+
+    function showError(msg) {
+      $('error-area').classList.remove('hidden');
+      $('error-text').textContent = msg;
+      $('status-area').classList.add('hidden');
+    }
+
+    function hideError() {
+      $('error-area').classList.add('hidden');
+    }
+
+    function resetButton() {
+      polling = false;
+      $('scrape-btn').disabled = !getPAT();
+      $('scrape-btn').textContent = getPAT() ? 'Scrape' : 'Plak eerst je token hierboven';
+    }
+
+    function sleep(ms) {
+      return new Promise(r => setTimeout(r, ms));
+    }
+
+    $('scrape-btn').addEventListener('click', runScrape);
+    $('url-input').addEventListener('keydown', e => {
+      if (e.key === 'Enter' && !$('scrape-btn').disabled) runScrape();
+    });
+
+    refreshUI();
+  </script>
+
+</body>
+</html>
