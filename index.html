@@ -93,7 +93,7 @@
           <span class="font-semibold">Klaar!</span>
         </div>
         <button id="download-btn" class="accent text-white font-semibold px-6 py-3 rounded-md w-full transition">
-          Download scraped_data.md
+          Download resultaat
         </button>
         <p class="text-xs text-slate-500 mt-3 mono" id="run-info"></p>
       </div>
@@ -194,6 +194,21 @@
 
     // ─── Hoofd-flow ──────────────────────────────────────────
     let polling = false;
+    let lastFilename = 'scraped_data.md';
+
+    // Leidt een bestandsnaam af van de gescrapete URL: hostname (+ pad), .md
+    function filenameFromUrl(url) {
+      try {
+        const u = new URL(url);
+        let name = u.hostname.replace(/^www\./, '');
+        const path = u.pathname.replace(/^\/+|\/+$/g, '');
+        if (path) name += '-' + path;
+        name = name.replace(/[^a-z0-9.-]+/gi, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+        return (name || 'scraped_data') + '.md';
+      } catch {
+        return 'scraped_data.md';
+      }
+    }
 
     async function runScrape() {
       const url = $('url-input').value.trim();
@@ -281,6 +296,8 @@
       $('status-area').classList.add('hidden');
       $('result-area').classList.remove('hidden');
       $('run-info').textContent = `Run #${run.run_number} — ${scrapedUrl}`;
+      lastFilename = filenameFromUrl(scrapedUrl);
+      $('download-btn').textContent = `Download ${lastFilename}`;
       resetButton();
     }
 
@@ -298,7 +315,7 @@
         const blobUrl = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = blobUrl;
-        a.download = 'scraped_data.md';
+        a.download = lastFilename;
         document.body.appendChild(a);
         a.click();
         a.remove();
